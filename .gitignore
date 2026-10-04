@@ -1,0 +1,8 @@
+# Dart and pub generated files
+.dart_tool/
+build/
+pubspec.lock
+
+# IDE and operating system files
+.idea/
+.DS_Store

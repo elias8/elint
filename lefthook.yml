@@ -1,0 +1,6 @@
+pre-commit:
+  commands:
+    dart-format:
+      glob: "*.dart"
+      run: dart format {staged_files}
+      stage_fixed: true
