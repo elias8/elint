@@ -1,3 +1,4 @@
 linter:
   rules:
+    - avoid_duplicate_primary_constructor_fields
     - sort_member_order

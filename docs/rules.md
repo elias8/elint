@@ -9,6 +9,19 @@ Rules are disabled until enabled in the `plugins.elint.diagnostics` section of
 `analysis_options.yaml`. See [Use in a project](../README.md#use-in-a-project)
 for the plugin configuration.
 
-| Rule                         | Description                                                   | Documentation                                  |
-|------------------------------|---------------------------------------------------------------|------------------------------------------------|
-| `sort_member_order` | Keep class and enum members in the configured order. | [Details](rules/sort_member_order.md) |
+## Enabling rules
+
+Enable an `elint` diagnostic in the consuming project's `analysis_options.yaml`:
+
+```yaml
+plugins:
+  elint:
+    path: ../elint
+    diagnostics:
+      avoid_duplicate_primary_constructor_fields: true
+```
+
+| Rule                                  | Description                                                        | Documentation                                           |
+|---------------------------------------|--------------------------------------------------------------------|---------------------------------------------------------|
+| `avoid_duplicate_primary_constructor_fields` | Avoid primary-constructor fields copied to another field.          | [Details](rules/avoid_duplicate_primary_constructor_fields.md) |
+| `sort_member_order`          | Keep class and enum members in the configured order.      | [Details](rules/sort_member_order.md)          |

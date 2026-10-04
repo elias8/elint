@@ -4,6 +4,7 @@ plugins:
   elint:
     path: ./
     diagnostics:
+      avoid_duplicate_primary_constructor_fields: true
       sort_member_order: true
 
 analyzer:
