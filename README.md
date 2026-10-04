@@ -2,9 +2,8 @@
 
 Reusable custom analyzer plugin for Dart projects maintained by BitshiftHQ.
 
-`elint` uses Dart's analysis server plugin system. Once custom diagnostics are
-registered in `lib/main.dart`, they can run in supported IDEs and from
-`dart analyze` or `flutter analyze`.
+`elint` uses Dart's analysis server plugin system. Registered diagnostics can
+run in supported IDEs and from `dart analyze` or `flutter analyze`.
 
 ## Requirements
 
@@ -30,7 +29,7 @@ plugins:
   elint:
     path: ../elint
     diagnostics:
-      your_rule_name: true
+      sort_member_order: true
 ```
 
 Then run `dart analyze` (or `flutter analyze`). Lint rules are disabled until
@@ -40,7 +39,7 @@ the IDE analysis server after changing plugin configuration.
 Suppress an individual diagnostic with its plugin-qualified name:
 
 ```dart
-// ignore: elint/your_rule_name
+// ignore: elint/sort_member_order
 ```
 
 ## Add a rule
@@ -48,6 +47,16 @@ Suppress an individual diagnostic with its plugin-qualified name:
 Implement an analyzer rule using `analysis_server_plugin`, then register it
 from `ElintPlugin.register` in `lib/main.dart`. Give each diagnostic a stable
 code; consuming projects use that code under `plugins.elint.diagnostics`.
+For each lint rule, add an entry to [the rule index](docs/rules.md) and a
+page at `docs/rules/<diagnostic_code>.md` with its description, valid
+examples, and available fixes.
+
+## Lint rules
+
+See the [elint lint rule index](docs/rules.md) for the available rules
+and their individual documentation. The index links to the
+[machine-readable rule catalog](docs/all_lint_rules.yaml), and each
+rule page describes its diagnostic, examples, and available fixes.
 
 See the [Dart analyzer plugin guide](https://dart.dev/tools/analyzer-plugins)
 for rule, fix, and assist authoring details.

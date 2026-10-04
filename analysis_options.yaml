@@ -1,5 +1,11 @@
 include: all_lint_rules.yaml
 
+plugins:
+  elint:
+    path: ./
+    diagnostics:
+      sort_member_order: true
+
 analyzer:
   language:
     strict-casts: true

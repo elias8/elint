@@ -1,6 +1,10 @@
 import 'package:analysis_server_plugin/plugin.dart';
 import 'package:analysis_server_plugin/registry.dart';
 
+import 'src/rules/sort_member_order/sort_member_order.dart';
+import 'src/rules/sort_member_order/sort_member_order_assist.dart';
+import 'src/rules/sort_member_order/sort_member_order_fix.dart';
+
 /// The plugin entry point loaded by the Dart analysis server.
 final plugin = ElintPlugin();
 
@@ -11,6 +15,9 @@ class ElintPlugin extends Plugin {
 
   @override
   void register(PluginRegistry registry) {
-    // Register custom rules here as they are added to the package.
+    registry
+      ..registerLintRule(SortMemberOrder())
+      ..registerFixForRule(SortMemberOrder.code, SortMemberOrderFix.new)
+      ..registerAssist(SortMemberOrderAssist.new);
   }
 }
