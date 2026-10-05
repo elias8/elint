@@ -1,6 +1,7 @@
 import 'package:analysis_server_plugin/plugin.dart';
 import 'package:analysis_server_plugin/registry.dart';
 
+import 'src/rules/avoid_async_values_in_fields_and_constructors/avoid_async_values_in_fields_and_constructors.dart';
 import 'src/rules/avoid_duplicate_primary_constructor_fields/avoid_duplicate_primary_constructor_fields.dart';
 import 'src/rules/avoid_duplicate_primary_constructor_fields/avoid_duplicate_primary_constructor_fields_assist.dart';
 import 'src/rules/avoid_duplicate_primary_constructor_fields/avoid_duplicate_primary_constructor_fields_fix.dart';
@@ -19,6 +20,7 @@ class ElintPlugin extends Plugin {
   @override
   void register(PluginRegistry registry) {
     registry
+      ..registerLintRule(AvoidAsyncValuesInFieldsAndConstructors())
       ..registerLintRule(AvoidDuplicatePrimaryConstructorFields())
       ..registerFixForRule(
         AvoidDuplicatePrimaryConstructorFields.code,
