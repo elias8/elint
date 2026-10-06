@@ -108,7 +108,7 @@ ignore comments. Without a target, it analyzes the current directory.
 | Group | Rules |
 | --- | --- |
 | `layout` | `prefer_arrow_body_on_same_line`, `sort_member_order` |
-| `async` | `prefer_returning_values_from_async_functions`, `avoid_async_values_in_fields_and_constructors` |
+| `async` | `prefer_async_await`, `prefer_returning_values_from_async_functions`, `avoid_async_values_in_fields_and_constructors` |
 
 `avoid_duplicate_primary_constructor_fields` is available by code and has no group.
 `avoid_async_values_in_fields_and_constructors` currently has no automatic fix.

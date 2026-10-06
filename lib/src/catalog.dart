@@ -9,6 +9,9 @@ import 'rules/avoid_duplicate_primary_constructor_fields/avoid_duplicate_primary
 import 'rules/prefer_arrow_body_on_same_line/prefer_arrow_body_on_same_line.dart';
 import 'rules/prefer_arrow_body_on_same_line/prefer_arrow_body_on_same_line_assist.dart';
 import 'rules/prefer_arrow_body_on_same_line/prefer_arrow_body_on_same_line_fix.dart';
+import 'rules/prefer_async_await/prefer_async_await.dart';
+import 'rules/prefer_async_await/prefer_async_await_assist.dart';
+import 'rules/prefer_async_await/prefer_async_await_fix.dart';
 import 'rules/prefer_returning_values_from_async_functions/prefer_returning_values_from_async_functions.dart';
 import 'rules/prefer_returning_values_from_async_functions/prefer_returning_values_from_async_functions_assist.dart';
 import 'rules/prefer_returning_values_from_async_functions/prefer_returning_values_from_async_functions_fix.dart';
@@ -48,6 +51,13 @@ abstract final class ElintCatalog() {
       rule: SortMemberOrder.new,
       fix: SortMemberOrderFix.new,
       assist: SortMemberOrderAssist.new,
+    ),
+    ElintRuleSpec(
+      code: PreferAsyncAwait.code.lowerCaseName,
+      groups: {'async'},
+      rule: PreferAsyncAwait.new,
+      fix: PreferAsyncAwaitFix.new,
+      assist: PreferAsyncAwaitAssist.new,
     ),
     ElintRuleSpec(
       code: PreferReturningValuesFromAsyncFunctions.code.lowerCaseName,

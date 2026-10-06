@@ -7,6 +7,7 @@ plugins:
       avoid_async_values_in_fields_and_constructors: true
       avoid_duplicate_primary_constructor_fields: true
       sort_member_order: true
+      prefer_async_await: true
       prefer_returning_values_from_async_functions: true
 
 analyzer:

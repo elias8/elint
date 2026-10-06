@@ -27,4 +27,5 @@ plugins:
 | `avoid_async_values_in_fields_and_constructors`                   | Keep asynchronous work out of class state and constructor inputs.  | [Details](rules/avoid_async_values_in_fields_and_constructors.md)                   |
 | `avoid_duplicate_primary_constructor_fields` | Avoid primary-constructor fields copied to another field.          | [Details](rules/avoid_duplicate_primary_constructor_fields.md) |
 | `sort_member_order`          | Keep class and enum members in the configured order.      | [Details](rules/sort_member_order.md)          |
+| `prefer_async_await`                          | Prefer `async`/`await` over `Future.then()`.                       | [Details](rules/prefer_async_await.md)                          |
 | `prefer_returning_values_from_async_functions`               | Prefer returning values directly from asynchronous functions.    | [Details](rules/prefer_returning_values_from_async_functions.md)              |
