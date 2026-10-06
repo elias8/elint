@@ -23,6 +23,7 @@ plugins:
 
 | Rule                                  | Description                                                        | Documentation                                           |
 |---------------------------------------|--------------------------------------------------------------------|---------------------------------------------------------|
+| `prefer_arrow_body_on_same_line`          | Keep the start of an arrow body on the same line as `=>`.          | [Details](rules/prefer_arrow_body_on_same_line.md)          |
 | `avoid_async_values_in_fields_and_constructors`                   | Keep asynchronous work out of class state and constructor inputs.  | [Details](rules/avoid_async_values_in_fields_and_constructors.md)                   |
 | `avoid_duplicate_primary_constructor_fields` | Avoid primary-constructor fields copied to another field.          | [Details](rules/avoid_duplicate_primary_constructor_fields.md) |
 | `sort_member_order`          | Keep class and enum members in the configured order.      | [Details](rules/sort_member_order.md)          |

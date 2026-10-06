@@ -1,5 +1,6 @@
 linter:
   rules:
+    - prefer_arrow_body_on_same_line
     - avoid_async_values_in_fields_and_constructors
     - avoid_duplicate_primary_constructor_fields
     - sort_member_order

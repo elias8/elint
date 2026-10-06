@@ -5,6 +5,9 @@ import 'src/rules/avoid_async_values_in_fields_and_constructors/avoid_async_valu
 import 'src/rules/avoid_duplicate_primary_constructor_fields/avoid_duplicate_primary_constructor_fields.dart';
 import 'src/rules/avoid_duplicate_primary_constructor_fields/avoid_duplicate_primary_constructor_fields_assist.dart';
 import 'src/rules/avoid_duplicate_primary_constructor_fields/avoid_duplicate_primary_constructor_fields_fix.dart';
+import 'src/rules/prefer_arrow_body_on_same_line/prefer_arrow_body_on_same_line.dart';
+import 'src/rules/prefer_arrow_body_on_same_line/prefer_arrow_body_on_same_line_assist.dart';
+import 'src/rules/prefer_arrow_body_on_same_line/prefer_arrow_body_on_same_line_fix.dart';
 import 'src/rules/prefer_returning_values_from_async_functions/prefer_returning_values_from_async_functions.dart';
 import 'src/rules/prefer_returning_values_from_async_functions/prefer_returning_values_from_async_functions_assist.dart';
 import 'src/rules/prefer_returning_values_from_async_functions/prefer_returning_values_from_async_functions_fix.dart';
@@ -23,6 +26,12 @@ class ElintPlugin extends Plugin {
   @override
   void register(PluginRegistry registry) {
     registry
+      ..registerLintRule(PreferArrowBodyOnSameLine())
+      ..registerFixForRule(
+        PreferArrowBodyOnSameLine.code,
+        PreferArrowBodyOnSameLineFix.new,
+      )
+      ..registerAssist(PreferArrowBodyOnSameLineAssist.new)
       ..registerLintRule(AvoidAsyncValuesInFieldsAndConstructors())
       ..registerLintRule(AvoidDuplicatePrimaryConstructorFields())
       ..registerFixForRule(
