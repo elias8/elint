@@ -2,6 +2,9 @@ name: elint
 description: Custom analyzer plugins and lint rules for BitshiftHQ Dart projects.
 version: 0.1.0
 
+executables:
+  elint: elint
+
 environment:
   sdk: ^3.13.0
 
@@ -9,6 +12,7 @@ dependencies:
   analysis_server_plugin: ^0.3.23
   analyzer: ^14.4.0
   analyzer_plugin: ^0.14.17
+  args: ^2.7.0
   package_config: ^3.0.0
   yaml: ^3.1.4
 
