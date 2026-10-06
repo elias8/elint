@@ -5,6 +5,9 @@ import 'src/rules/avoid_async_values_in_fields_and_constructors/avoid_async_valu
 import 'src/rules/avoid_duplicate_primary_constructor_fields/avoid_duplicate_primary_constructor_fields.dart';
 import 'src/rules/avoid_duplicate_primary_constructor_fields/avoid_duplicate_primary_constructor_fields_assist.dart';
 import 'src/rules/avoid_duplicate_primary_constructor_fields/avoid_duplicate_primary_constructor_fields_fix.dart';
+import 'src/rules/prefer_returning_values_from_async_functions/prefer_returning_values_from_async_functions.dart';
+import 'src/rules/prefer_returning_values_from_async_functions/prefer_returning_values_from_async_functions_assist.dart';
+import 'src/rules/prefer_returning_values_from_async_functions/prefer_returning_values_from_async_functions_fix.dart';
 import 'src/rules/sort_member_order/sort_member_order.dart';
 import 'src/rules/sort_member_order/sort_member_order_assist.dart';
 import 'src/rules/sort_member_order/sort_member_order_fix.dart';
@@ -30,5 +33,12 @@ class ElintPlugin extends Plugin {
       ..registerLintRule(SortMemberOrder())
       ..registerFixForRule(SortMemberOrder.code, SortMemberOrderFix.new)
       ..registerAssist(SortMemberOrderAssist.new);
+    registry
+      ..registerLintRule(PreferReturningValuesFromAsyncFunctions())
+      ..registerFixForRule(
+        PreferReturningValuesFromAsyncFunctions.code,
+        PreferReturningValuesFromAsyncFunctionsFix.new,
+      )
+      ..registerAssist(PreferReturningValuesFromAsyncFunctionsAssist.new);
   }
 }
