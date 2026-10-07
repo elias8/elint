@@ -107,6 +107,7 @@ ignore comments. Without a target, it analyzes the current directory.
 
 | Group | Rules |
 | --- | --- |
+| `architecture` | `avoid_cubit_parameters_in_widget_constructors`, `avoid_cubit_dependencies`, `avoid_flutter_imports_in_cubits`, `avoid_returning_values_from_cubits`, `prefer_matching_cubit_file_names` |
 | `layout` | `prefer_arrow_body_on_same_line`, `sort_member_order` |
 | `async` | `prefer_async_await`, `prefer_returning_values_from_async_functions`, `avoid_async_values_in_fields_and_constructors` |
 

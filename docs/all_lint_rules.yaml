@@ -1,8 +1,13 @@
 linter:
   rules:
+    - avoid_cubit_parameters_in_widget_constructors
     - prefer_arrow_body_on_same_line
     - avoid_async_values_in_fields_and_constructors
+    - avoid_cubit_dependencies
+    - avoid_flutter_imports_in_cubits
     - avoid_duplicate_primary_constructor_fields
     - sort_member_order
     - prefer_async_await
     - prefer_returning_values_from_async_functions
+    - avoid_returning_values_from_cubits
+    - prefer_matching_cubit_file_names
