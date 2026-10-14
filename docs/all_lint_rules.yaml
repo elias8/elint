@@ -10,4 +10,5 @@ linter:
     - prefer_async_await
     - prefer_returning_values_from_async_functions
     - avoid_returning_values_from_cubits
+    - avoid_post_frame_scheduling
     - prefer_matching_cubit_file_names

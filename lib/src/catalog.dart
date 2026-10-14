@@ -9,6 +9,7 @@ import 'rules/avoid_duplicate_primary_constructor_fields/avoid_duplicate_primary
 import 'rules/avoid_duplicate_primary_constructor_fields/avoid_duplicate_primary_constructor_fields_assist.dart';
 import 'rules/avoid_duplicate_primary_constructor_fields/avoid_duplicate_primary_constructor_fields_fix.dart';
 import 'rules/avoid_flutter_imports_in_cubits/avoid_flutter_imports_in_cubits.dart';
+import 'rules/avoid_post_frame_scheduling/avoid_post_frame_scheduling.dart';
 import 'rules/avoid_returning_values_from_cubits/avoid_returning_values_from_cubits.dart';
 import 'rules/prefer_arrow_body_on_same_line/prefer_arrow_body_on_same_line.dart';
 import 'rules/prefer_arrow_body_on_same_line/prefer_arrow_body_on_same_line_assist.dart';
@@ -90,6 +91,11 @@ abstract final class ElintCatalog() {
       code: AvoidReturningValuesFromCubits.code.lowerCaseName,
       groups: {'architecture'},
       rule: AvoidReturningValuesFromCubits.new,
+    ),
+    ElintRuleSpec(
+      code: AvoidPostFrameScheduling.code.lowerCaseName,
+      groups: {'layout'},
+      rule: AvoidPostFrameScheduling.new,
     ),
     ElintRuleSpec(
       code: PreferMatchingCubitFileNames.code.lowerCaseName,

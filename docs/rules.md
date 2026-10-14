@@ -33,4 +33,5 @@ plugins:
 | `prefer_async_await`                          | Prefer `async`/`await` over `Future.then()`.                       | [Details](rules/prefer_async_await.md)                          |
 | `prefer_returning_values_from_async_functions`               | Prefer returning values directly from asynchronous functions.    | [Details](rules/prefer_returning_values_from_async_functions.md)              |
 | `avoid_returning_values_from_cubits`          | Do keep public Cubit method results in state; return `void` or `Future<void>`. | [Details](rules/avoid_returning_values_from_cubits.md) |
+| `avoid_post_frame_scheduling`          | Avoid post-frame work unless it depends on a completed frame.       | [Details](rules/avoid_post_frame_scheduling.md) |
 | `prefer_matching_cubit_file_names`               | Do match Cubit class names to snake_case file names.              | [Details](rules/prefer_matching_cubit_file_names.md)               |

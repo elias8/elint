@@ -4,6 +4,7 @@ plugins:
   elint:
     path: ./
     diagnostics:
+      prefer_arrow_body_on_same_line: true
       avoid_async_values_in_fields_and_constructors: true
       avoid_duplicate_primary_constructor_fields: true
       sort_member_order: true
